@@ -1,0 +1,22 @@
+The intended effect of a function or expression is to produce a value
+
+A side effect is any observable effect other than the return value itself:
+- a change in a state variable
+- a message printed in the console
+- a change in a file in the disk
+- an exception being thrown
+- ... some more
+
+An expression is referentially transparent if it can be replaced by its value
+
+A function is pure if:
+- given the same arguments, produces the same result
+- it has no side-effects
+
+Manu side-effectful expression ca nbe 'purified' with monads:
+- Mutable state -> State
+- Exceptions -> Options, Either
+- writing to console/disk/network -> IO
+
+Option, Either, State are sometimes referred to as monadic effects
+

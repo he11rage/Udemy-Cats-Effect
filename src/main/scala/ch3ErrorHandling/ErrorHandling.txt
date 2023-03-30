@@ -1,0 +1,21 @@
+Error Handling
+
+Which datatype should we use for error handling?
+- Option
+- Try
+- Validated
+- Either
+- IO
+
+Ошибки делятся на два типа:
+- Domain errors
+- Technical errors
+
+Чтобы избежать этих ошибок следует:
+1) В случае Domain errors:
+    1.1) Accumulate -> Validated;
+    1.2) Fail fast -> Either + Error ADT.
+
+2) Technical errors:
+    2.1) Recoverable -> IO(raiseError, handleErrorWith);
+    2.2) Fatal -> let it fail.
